@@ -7,7 +7,6 @@ import org.junit.Test;
 
 public class userRegistration {
 
-	
 	public boolean firstName(String firstName) {
 		String regex = "^[A-Z]{1}[a-z]{2,}$";
 		Pattern pattern = Pattern.compile(regex);
@@ -49,5 +48,11 @@ public class userRegistration {
 		Matcher matcher = pattern.matcher(password);
 		return matcher.matches();
 
+	}
+	public boolean password3(String password) {
+		String regex = "((?=.[a-z]).{8,9})";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(password);
+		return matcher.matches();
 	}
 }
